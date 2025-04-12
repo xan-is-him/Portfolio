@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blogs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #000;
+      background-image: 
+        linear-gradient(90deg, rgba(211, 211, 211, 0.2) 1px, transparent 1px),
+        linear-gradient(rgba(211, 211, 211, 0.2) 1px, transparent 1px);
+      background-size: 40px 40px;
+      font-family: 'Roboto Slab', serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    header {
+      background: transparent;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px 30px;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul li {
+      margin: 0 30px;
+    }
+
+    nav ul li:last-child {
+      margin-right: 50px;
+    }
+
+    nav ul li a, .brand {
+      text-decoration: none;
+      color: #0D0D0D;
+      font-weight: bold;
+      font-size: 0.7em;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.7em;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.2);
+    }
+
+    .social-icons a {
+      margin-right: -5px;
+    }
+
+    /* Blog Section Styles */
+    .blog-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .blog-section h2 {
+      font-size: 2em;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .blog-section hr {
+      width: 60px;
+      border: 1px solid #fff;
+      margin: 10px auto 40px auto;
+    }
+
+    .blog-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .blog-card {
+      width: 45%;
+      min-width: 300px;
+      background-color: transparent;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: left;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .blog-content {
+      background-color: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+      padding: 30px;
+    }
+
+    .blog-title {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .blog-meta {
+      font-size: 0.9em;
+      color: #ccc;
+      margin: 10px 0;
+    }
+
+    .blog-meta a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .blog-excerpt {
+      font-size: 1em;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .read-more:hover {
+      background-color: #eee;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .blog-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">Portfolio</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="projects.html">MY PROJECTS</a></li>
+        <li><a href="blogs.html">BLOG</a></li>
+        <li class="social-icons">
+          <a href="https://github.com/xan-is-him" target="_blank"><img src="logos/github-logo.png" alt="GitHub" style="width:20px; height:20px;"></a>
+          <a href="https://www.linkedin.com/in/sujit-lama-06328433b/" target="_blank"><img src="logos/linkedin-logo.png" alt="LinkedIn" style="width:20px; height:20px;"></a>
+          <a href="mailto:youremail@example.com" target="_blank"><img src="logos/email-logo.jpg" alt="Mail" style="width:20px; height:20px;"></a>
+          <a href="https://www.instagram.com/suj_it.d/" target="_blank"><img src="logos/insta-logo.png" alt="Instagram" style="width:20px; height:20px;"></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Blog Section Starts Here -->
+  <section class="blog-section">
+    <h2>LATEST POSTS</h2>
+    <hr />
+
+    <div class="blog-grid">
+
+      <!-- Blog Post 1 -->
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="JavaScript Basics" class="blog-image" />
+        <div class="blog-content">
+          <h3 class="blog-title">Mastering the Basics of JavaScript</h3>
+          <p class="blog-meta">by <a href="#">Xan</a> / April 12, 2025 / <a href="#">2 Comments</a></p>
+          <p class="blog-excerpt">
+            JavaScript is the backbone of interactive web design. This blog covers the foundational concepts every beginner should understand including variables, functions, and DOM manipulation...
+          </p>
+          <a href="post1.html" class="read-more">READ MORE</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Portfolio Development" class="blog-image" />
+        <div class="blog-content">
+          <h3 class="blog-title">How I Built My Portfolio from Scratch</h3>
+          <p class="blog-meta">by <a href="#">Sujit</a> / April 10, 2025 / <a href="#">0 Comments</a></p>
+          <p class="blog-excerpt">
+            Learn how I used HTML, CSS, and JavaScript to design a fully responsive and animated portfolio website, optimized for both performance and personality...
+          </p>
+          <a href="post2.html" class="read-more">READ MORE</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

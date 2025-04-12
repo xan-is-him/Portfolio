@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif; /* Use Roboto Slab font */
+            margin: 0;
+            padding: 0;
+            color: #373737; /* Dark grey text color */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Images/BGG.jpg'); /* Darker black gradient overlay with background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Fix the background image */
+            overflow-y: hidden; /* Remove vertical scrollbar */
+        }
+
+        header {
+            background: transparent; /* Transparent background for header */
+            padding: 10px 20px; /* Increased padding for more space */
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between name and nav */
+            color: #fff; /* Ensure text is fully opaque */
+            margin: 20px 30px; /* Space on left and right */
+            border-radius: 20px; /* More circular corners */
+            position: relative;
+            z-index: 1; /* Ensure the header is above the left-side background */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+        }
+
+        nav ul li {
+            margin: 0 30px; /* Increased space between items */
+        }
+
+        nav ul li:first-child {
+            margin-left: 50px; /* Space between left side and Sujit Lama */
+        }
+
+        nav ul li:last-child {
+            margin-right: 50px; /* Reduce space between icons and right side of the nav bar */
+        }
+
+        nav ul li a, .brand {
+            text-decoration: none;
+            color: #0D0D0D; /* Very dark grey accent color */
+            font-weight: bold; /* Make words bold */
+            font-size: 0.7em; /* Smaller font size for right side content */
+        }
+        .brand {
+            text-decoration: none;
+            color: #fff; /* White text color */
+            font-size: 1.3em; /* Smaller font size for right side content */
+            font-weight: 400;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* White text color */
+            font-weight: bold; /* Make words bold */
+            font-size: 0.7em; /* Smaller font size for right side content */
+            padding: 10px 20px; /* Add padding to make them look like buttons */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        nav ul li a:hover {
+            background-color: #333; /* Dark background on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        .left-side {
+            /* background-image: url('images/PFP.jpg'); */ /* Remove the background image */
+            background-size: 90%; /* Slightly zoom in the image */
+            background-position: center; /* Center the image */
+            width: 50%; /* Cover half of the page */
+            height: 100vh; /* Full viewport height */
+            position: fixed; /* Fix the position to the left */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure the navbar is above the background image */
+        }
+
+        .about-me {
+            position: absolute;
+            left: 0; /* Move content to the left */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+            padding: 20px;
+            background-color: transparent; /* Transparent background for about-me */
+            color: #fff; /* White text color */
+            border-radius: 10px;
+            box-shadow: 0 px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 30px;
+        }
+
+        h3 {
+            font-weight: normal; /* Ensure h3 is not bold */
+        }
+
+        .logo-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        .logo-container img {
+            width: 40px; /* Consistent width for all logos */
+            height: 40px; /* Consistent height for all logos */
+            object-fit: contain; /* Maintain aspect ratio */
+            vertical-align: middle;
+        }
+
+        .social-icons a img {
+            width: 30px; /* Increase the size of the icons */
+            height: 30px; /* Increase the size of the icons */
+            border-radius: 50%; /* Make the icons circular */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+            /* Remove background color change */
+        }
+
+        .social-icons a {
+            margin-right: -5px; /* Further reduce space between icons */
+        }
+    </style>
+</head>
+<body>
+    <div class="left-side"></div> <!-- New left-side container -->
+    <header>
+        <a href="index.html" class="brand">Portfolio</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">MY PROJECTS</a></li>
+                <li><a href="blogs.html">BLOG</a></li>
+                <li class="social-icons">
+                    <a href="https://github.com/xan-is-him" target="_blank"><img src="logos/github-logo.png" alt="GitHub" style="width:20px; height:20px;"></a>
+                    <a href="https://www.linkedin.com/in/sujit-lama-06328433b/" target="_blank"><img src="logos/linkedin-logo.png" alt="LinkedIn" style="width:20px; height:20px;"></a>
+                    <a href="mailto:youremail@example.com" target="_blank"><img src="logos/email-logo.jpg" alt="Mail" style="width:20px; height:20px;"></a>
+                    <a href="https://www.instagram.com/suj_it.d/" target="_blank"><img src="logos/insta-logo.png" alt="Instagram" style="width:20px; height:20px;"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about-me">
+        <h2>Sujit Lama</h2>
+        <h3>Full Stack Developer | Kathmandu, Nepal</h3>
+        <p>I'm a part coder, part magician. I turn coffee into code, bugs into features, and big ideas into slick, scalable web apps that just work.</p>
+        <p>
+            <strong>I work with</strong>
+            <div class="logo-container">
+                <img src="logos/html-logo.jpg" alt="HTML Logo">
+                <img src="logos/css-logo.png" alt="CSS Logo">
+                <img src="logos/js-logo.png" alt="JavaScript Logo">
+                <img src="logos/php-logo.png" alt="PHP Logo" style="width:40px; height:40px; vertical-align:middle; margin-top: 8px;">
+                <img src="logos/wp-logo.png" alt="WordPress Logo" style="margin-top: 8px;">
+            </div>
+        </p>
+    </div>
+</body>
+</html>

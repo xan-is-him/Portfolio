@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000; /* Black background */
+            background-image: 
+                linear-gradient(90deg, rgba(211, 211, 211, 0.2) 1px, transparent 1px),
+                linear-gradient(rgba(211, 211, 211, 0.2) 1px, transparent 1px);
+            background-size: 40px 40px; /* Size of the grid squares */
+            font-family: 'Roboto Slab', serif; /* Use Roboto Slab font */
+            margin: 0;
+            padding: 0;
+            color: #373737; /* Dark grey text color */
+            overflow-y: hidden; /* Remove vertical scrollbar */
+        }
+
+        header {
+            background: transparent; /* Transparent background for header */
+            padding: 10px 20px; /* Increased padding for more space */
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between name and nav */
+            color: #fff; /* Ensure text is fully opaque */
+            margin: 20px 30px; /* Space on left and right */
+            border-radius: 20px; /* More circular corners */
+            position: relative;
+            z-index: 1; /* Ensure the header is above the left-side background */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+        }
+
+        nav ul li {
+            margin: 0 30px; /* Space between items */
+        }
+
+        nav ul li:last-child {
+            margin-right: 50px; /* Space between right side and Blog */
+        }
+
+        nav ul li a, .brand {
+            text-decoration: none;
+            color: #0D0D0D; /* Very dark grey accent color */
+            font-weight: bold; /* Make words bold */
+            font-size: 0.7em; /* Smaller font size for right side content */
+        }
+        .brand {
+            text-decoration: none;
+            color: #fff; /* White text color */
+            font-size: 1.3em; /* Smaller font size for right side content */
+            font-weight: 400;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* White text color */
+            font-weight: bold; /* Make words bold */
+            font-size: 0.7em; /* Smaller font size for right side content */
+            padding: 10px 20px; /* Add padding to make them look like buttons */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        nav ul li a:hover {
+            background-color: #333; /* Dark background on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        .social-icons a img {
+            width: 30px; /* Increase the size of the icons */
+            height: 30px; /* Increase the size of the icons */
+            border-radius: 50%; /* Make the icons circular */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+            /* Remove background color change */
+        }
+
+        .social-icons a {
+            margin-right: -5px; /* Further reduce space between icons */
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
+            gap: 20px; /* Space between boxes */
+            padding: 20px ; /* Add equal padding on left and right sides */
+            padding-left: 92px; /* Increase left padding for more space */
+            padding-right: 12px;
+        }
+
+        .project-box {
+            background-color: #d3d3d3; /* Grey background for each box */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 0; /* Remove padding to eliminate gap */
+            text-align: center;
+            height: 250px; /* Double the height */
+            width: 400px;
+            overflow: hidden; /* Ensure content doesn't overflow */
+        }
+
+        .project-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire box */
+            display: block; /* Remove any inline spacing */
+            transition: transform 0.3s ease;
+        }
+
+        .project-box:hover img {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* White text color */
+            margin-top: 80px; /* Further increase top margin for more space */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand">Portfolio</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">MY PROJECTS</a></li>
+                <li><a href="blogs.html">BLOG</a></li>
+                <li class="social-icons">
+                    <a href="https://github.com/xan-is-him" target="_blank"><img src="logos/github-logo.png" alt="GitHub" style="width:20px; height:20px;"></a>
+                    <a href="https://www.linkedin.com/in/sujit-lama-06328433b/" target="_blank"><img src="logos/linkedin-logo.png" alt="LinkedIn" style="width:20px; height:20px;"></a>
+                    <a href="mailto:youremail@example.com" target="_blank"><img src="logos/email-logo.jpg" alt="Mail" style="width:20px; height:20px;"></a>
+                    <a href="https://www.instagram.com/suj_it.d/" target="_blank"><img src="logos/insta-logo.png" alt="Instagram" style="width:20px; height:20px;"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>My Projects</h1>
+    <div class="projects-container">
+        <div class="project-box">
+            <a href="project1.html"><img src="projects/project1.png" alt="Project 1"></a>
+        </div>
+        <div class="project-box">
+            <a href="project2.html"><img src="projects/project2.png" alt="Project 2"></a>
+        </div>
+        <div class="project-box">
+            <a href="project3.html"><img src="projects/project3.png" alt="Project 3"></a>
+        </div>
+    </div>
+    
+</body>
+</html>    
